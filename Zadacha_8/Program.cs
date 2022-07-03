@@ -4,6 +4,7 @@ int j = 2;
 
 while (j <= i)
 {
-    Console.Write ($"{j} ");
+    Console.Write ($"{j},");
     j +=2;
 }
+Console.Write("\b \b");

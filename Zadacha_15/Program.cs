@@ -1,19 +1,15 @@
-﻿Console.WriteLine ("Введите номер дня недели: ");
-int i = int.Parse (Console.ReadLine ()!);
+﻿Console.WriteLine("Введите номер дня недели: ");
+int i = int.Parse(Console.ReadLine()!);
 
 if (i > 0 && i <= 5)
 {
     System.Console.WriteLine("Будни");
 }
-if (i > 5 && i < 8)
+else if (i > 5 && i < 8)
 {
     System.Console.WriteLine("Выходной");
 }
-else 
+else if (i <= 0 || i > 7)
 {
-    if (i <= 0 || i > 7)
-    {
-        System.Console.WriteLine("Неверный номер дня");
-    }
-    
+    System.Console.WriteLine("Неверный номер дня");
 }
