@@ -6,12 +6,11 @@
 System.Console.WriteLine("Введите число: ");
 string chislo = Console.ReadLine()!;
 int length = chislo.Length;
-int[] array = new int[length];
 int sum = 0;
 
 for (int i = 0; i < length; i++)
 {
-    array[i] = (int)char.GetNumericValue(chislo[i]);
-    sum += array[i];
+    sum += (int)char.GetNumericValue(chislo[i]);
 }
+
 System.Console.WriteLine(sum);
