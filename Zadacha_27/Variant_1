@@ -1,0 +1,19 @@
+﻿// Напишите функцию, которая принимает на вход число и выдает
+// сумму цифр в числе.
+
+// Не стал делать проверку для отрицательных чисел, это не сложно
+// зато учел Ваши реккомендации по сокращению операций
+System.Console.WriteLine("Введите число: ");
+int chislo = int.Parse (Console.ReadLine()!);
+
+void Summa(int a)
+{
+    int temp = 0;
+    for (; a > 0; a /= 10)
+    {
+        temp += a % 10;
+    } 
+    System.Console.WriteLine(temp);
+}
+
+Summa(chislo);
