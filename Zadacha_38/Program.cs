@@ -1,30 +1,31 @@
 ﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным
 // и минимальным элементов массива.
 
-int[] array = GetArray(20);
+double[] array = GetArray(20);
 PrintArray(array);
 
 System.Console.WriteLine($"\nРазница между максимальным и минимальным значеними в массиве равна = {DiffMinMax(array)}");
 
-void PrintArray(int[] array)
+void PrintArray(double[] array)
 {
     System.Console.WriteLine(string.Join(',', array));
 }
 
-int[] GetArray(int size)
+double[] GetArray(int size)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(-999, 999);
+        array[i] = new Random().NextDouble() * (999-(-999))+(-999);
+        array[i] = Math.Round(array[i],2);
     }
     return array;
 }
 
-int DiffMinMax(int[] array)
+double DiffMinMax(double[] array)
 {
-    int min = array[0];
-    int max = array[0];
+    double min = array[0];
+    double max = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > max)
@@ -36,6 +37,6 @@ int DiffMinMax(int[] array)
             min = array[i];
         }
     }
-    int diff = max - min;
+    double diff = Math.Round(max - min,2);
     return diff;
 }
