@@ -24,7 +24,7 @@ void FindIntersection(double[] firstArr, double[] secondArr)
     {
         double x = (firstArr[0] - secondArr[0]) / (secondArr[1] - firstArr[1]);
         double y = firstArr[1] * x + firstArr[0];
-        System.Console.WriteLine($"Точки пересечения прямых  ({x};{y}).");
+        System.Console.WriteLine($"Точка пересечения прямых  ({x};{y}).");
     }
 
 
