@@ -22,7 +22,7 @@ void PrintMatrix(int[,] mtrx)
         for (int j = 0; j < mtrx.GetLength(1); j++)
         {
             if (j == 0) System.Console.Write(" | ");
-            System.Console.Write($"{mtrx[i, j],3} | ");
+            System.Console.Write($"{mtrx[i, j],4} | ");
         }
         System.Console.WriteLine("");
     }
@@ -30,7 +30,7 @@ void PrintMatrix(int[,] mtrx)
 
 void AverageOfColumns(int[,] matrix)
 {
-    int count = 0;
+    double count = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
@@ -38,7 +38,7 @@ void AverageOfColumns(int[,] matrix)
             count += matrix[i,j];
         }
         if (j == 0) System.Console.WriteLine("Средне по столбцу равно:");
-        System.Console.Write($" |  {count}");
+        System.Console.Write($" |  {Math.Round(count / matrix.GetLength(0), 1)}");
         if (j == matrix.GetLength(1) - 1) System.Console.Write(" |");
         count = 0;
     }
