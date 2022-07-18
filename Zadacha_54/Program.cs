@@ -22,15 +22,18 @@ int[,] GetMatrix(int rows, int columns)
 
 void PrintMatrix(int[,] mtrx)
 {
+    string s = new string('-', columnCount * 5);
+    System.Console.WriteLine($"  " + s + "\b \b");
     for (int i = 0; i < mtrx.GetLength(0); i++)
     {
         for (int j = 0; j < mtrx.GetLength(1); j++)
         {
             if (j == 0) System.Console.Write(" | ");
-            System.Console.Write($"{mtrx[i, j],4} | ");
+            System.Console.Write($"{mtrx[i, j],2} | ");
         }
         System.Console.WriteLine("");
     }
+    System.Console.WriteLine($"  " + s + "\b \b");
 }
 
 void SortMatrix(int[,] mtrx)
@@ -81,7 +84,12 @@ void SortMatrix(int[,] mtrx)
 }
 
 int[,] arr = GetMatrix(rowCount, columnCount);
+Console.Clear();
+Console.ForegroundColor = ConsoleColor.Red;
+System.Console.WriteLine("Изначальная матрица:");
 PrintMatrix(arr);
-System.Console.WriteLine();
+Console.ForegroundColor = ConsoleColor.Green;
+System.Console.WriteLine("Отсортированная матрица:");
 SortMatrix(arr);
 PrintMatrix(arr);
+Console.ForegroundColor = ConsoleColor.White;
