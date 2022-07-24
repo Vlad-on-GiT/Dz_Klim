@@ -38,9 +38,10 @@ void PrintMatrix(int[,] mtrx)
 
 void SortMatrix(int[,] mtrx)
 {
-    int[] row = new int[columnCount];
     int rowSize = mtrx.GetLength(0);
     int columnSize = mtrx.GetLength(1);
+    
+    int[] row = new int[columnCount];
     for (int i = 0; i < rowSize; i++)
     {
         for (int j = 0; j < columnSize; j++)
