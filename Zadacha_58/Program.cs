@@ -1,6 +1,11 @@
 ﻿/* Задайте две матрицы. Напишите программу, которая будет находить
 произведение двух матриц. */
 
+Console.ForegroundColor = ConsoleColor.Red;
+System.Console.WriteLine("!!!              Важным условием перемножения матрицы является:              !!!");
+System.Console.WriteLine("!!!                совпадение количества строк первой матрицы                !!!");
+System.Console.WriteLine("!!!                      с количеством столбцов второй                       !!!");
+Console.ForegroundColor = ConsoleColor.White;
 System.Console.WriteLine("Введите количество строк первой матрицы:");
 int rowCountFirst = int.Parse(Console.ReadLine()!);
 System.Console.WriteLine("Введите количество столбцов первой матрицы:");
